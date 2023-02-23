@@ -23,7 +23,7 @@ class _SplashViewState extends State<SplashView> {
   }
 
   _goNext() {
-    Navigator.pushReplacementNamed(context, Routes.mainRoute);
+    Navigator.pushReplacementNamed(context, Routes.registerRoute);
   }
 
   @override

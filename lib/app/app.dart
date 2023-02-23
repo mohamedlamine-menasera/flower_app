@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import '../presentation/resources/routes_manager.dart';
+import '../presentation/resources/theme_manager.dart';
 class MyApp extends StatefulWidget {
 
   // named constructor
@@ -22,11 +23,11 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return  const MaterialApp(
-      //theme:getApplicationTheme(),
+    return  MaterialApp(
+      theme:getApplicationTheme(),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: RouteGenerator.getRoute,
-      initialRoute: Routes.splashRoute,
+      initialRoute: Routes.mainRoute,
     );
   }
 }

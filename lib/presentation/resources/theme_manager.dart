@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'color_manager.dart';
 import 'font_manager.dart';
 
-ThemeData getApplicationTheme(){
+ThemeData getApplicationTheme() {
   return ThemeData(
 // Main color
     primaryColor: ColorManager.primary,
@@ -24,17 +24,23 @@ ThemeData getApplicationTheme(){
     ),
     // AppBar theme
     appBarTheme: AppBarTheme(
-      centerTitle: true,
-      color: ColorManager.primary,
-      elevation: AppSize.s4, // This property controls the size of the shadow below the app bar if shadowColor is not null.
+      //centerTitle: true,
+      color: ColorManager.green,
+      elevation: AppSize.s4,
+      // This property controls the size of the shadow below the app bar if shadowColor is not null.
       //shadowColor: ColorManager.lightPrimary,
-      titleTextStyle: getSemiBoldStyle(
-          fontSize: FontSize.s16, color: ColorManager.white),
+      titleTextStyle:
+          getBoldStyle(fontSize: FontSize.s20, color: ColorManager.white),
     ),
+
+    // TextButtonTheme
+    textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(textStyle: getBoldStyle(color: ColorManager.darkGrey,fontSize: FontSize.s16))),
+
     // Button theme
-    buttonTheme:  const ButtonThemeData(
+    buttonTheme: const ButtonThemeData(
       shape: StadiumBorder(),
-      buttonColor: ColorManager.primary,
+      buttonColor: ColorManager.green,
       disabledColor: ColorManager.grey1,
       splashColor: ColorManager.lightPrimary,
       textTheme: ButtonTextTheme.primary,
@@ -43,10 +49,9 @@ ThemeData getApplicationTheme(){
     // Elevated button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-          textStyle: getRegularStyle(
-              color: ColorManager.white,
-              fontSize: FontSize.s17)
-      ),
+          backgroundColor: ColorManager.green,
+          textStyle:
+              getBoldStyle(color: ColorManager.white, fontSize: FontSize.s18)),
     ),
 
     // Text Theme
@@ -72,14 +77,14 @@ ThemeData getApplicationTheme(){
     textTheme: TextTheme(
       displayLarge: getSemiBoldStyle(
           color: ColorManager.darkGrey, fontSize: FontSize.s16),
-      headlineLarge: getBoldStyle(
-          color: ColorManager.primary, fontSize: FontSize.s18),
-      headlineMedium: getRegularStyle(
-          color: ColorManager.darkGrey, fontSize: FontSize.s14),
-      displayMedium: getMediumStyle(
-          color: ColorManager.darkGrey, fontSize: FontSize.s16),
-      titleMedium: getMediumStyle(
-          color: ColorManager.lightGrey, fontSize: FontSize.s16),
+      headlineLarge:
+          getBoldStyle(color: ColorManager.primary, fontSize: FontSize.s18),
+      headlineMedium:
+          getRegularStyle(color: ColorManager.white, fontSize: FontSize.s14),
+      displayMedium:
+          getMediumStyle(color: ColorManager.darkGrey, fontSize: FontSize.s16),
+      titleMedium:
+          getMediumStyle(color: ColorManager.lightGrey, fontSize: FontSize.s16),
       bodyLarge: getRegularStyle(color: ColorManager.grey1),
       bodySmall: getRegularStyle(color: ColorManager.grey),
     ),
@@ -89,42 +94,34 @@ ThemeData getApplicationTheme(){
       // Content padding
       contentPadding: const EdgeInsets.all(AppPadding.p8),
       // Hint style
-      hintStyle: getRegularStyle(
-          color: ColorManager.darkGrey, fontSize: FontSize.s14),
-      labelStyle: getMediumStyle(
-          color: ColorManager.grey, fontSize: FontSize.s14),
+      hintStyle:
+          getRegularStyle(color: ColorManager.darkGrey, fontSize: FontSize.s14),
+      labelStyle:
+          getMediumStyle(color: ColorManager.grey, fontSize: FontSize.s14),
       errorStyle: getRegularStyle(color: ColorManager.error),
 
       // Enabled border style
       enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-              color: ColorManager.primary, width: AppBorder.b1_5),
-          borderRadius: BorderRadius.all(Radius.circular(AppBorder.b8))
-      ),
+          borderSide:
+              BorderSide(color: ColorManager.primary, width: AppBorder.b1_5),
+          borderRadius: BorderRadius.all(Radius.circular(AppBorder.b8))),
 
       // Focused border style
       focusedBorder: const OutlineInputBorder(
-        borderSide: BorderSide(
-            color: ColorManager.grey,
-            width: AppBorder.b1_5),
+        borderSide: BorderSide(color: ColorManager.grey, width: AppBorder.b1_5),
       ),
 
       // Error border style
       errorBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-              color: ColorManager.error, width: AppBorder.b1_5),
+          borderSide:
+              BorderSide(color: ColorManager.error, width: AppBorder.b1_5),
           borderRadius: BorderRadius.all(Radius.circular(AppBorder.b8))),
 
       // Focused border style
       focusedErrorBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-              color: ColorManager.primary, width: AppBorder.b8
-          ),
-          borderRadius: BorderRadius.all(Radius.circular(AppBorder.b8))
-      ),
-
-
+          borderSide:
+              BorderSide(color: ColorManager.primary, width: AppBorder.b8),
+          borderRadius: BorderRadius.all(Radius.circular(AppBorder.b8))),
     ),
   );
-
 }
