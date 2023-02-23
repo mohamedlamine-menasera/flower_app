@@ -7,7 +7,7 @@ import '../main/main.dart';
 import '../splash/splash_view.dart';
 
 class Routes {
-  //static const String splashRoute = "/";
+  // static const String splashRoute = "/";
   static const String mainRoute = "/main";
   static const String loginRoute = "/login";
   static const String registerRoute = "/register";

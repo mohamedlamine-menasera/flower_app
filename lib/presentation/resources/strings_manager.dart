@@ -11,5 +11,13 @@ class AppStrings{
   static const String AlreadyHaveAnAccount = "Already have an account";
   static const String home = "Home";
   static const String price = "\$1000";
-  static const String numberOfPurchases = "13";
+  static const String numberOfPurchases = "10";
+  static const String accountName = "User";
+  static const String accountEmail = "User@user.local";
+  static const String myProducts = "My Products";
+  static const String about = "About";
+  static const String logout = "Logout";
+  static const String developerInfo = "Developed by Mohamedlamine 2023";
+
+
 }

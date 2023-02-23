@@ -35,7 +35,9 @@ ThemeData getApplicationTheme() {
 
     // TextButtonTheme
     textButtonTheme: TextButtonThemeData(
-        style: TextButton.styleFrom(textStyle: getBoldStyle(color: ColorManager.darkGrey,fontSize: FontSize.s16))),
+        style: TextButton.styleFrom(
+            textStyle: getBoldStyle(
+                color: ColorManager.darkGrey, fontSize: FontSize.s16))),
 
     // Button theme
     buttonTheme: const ButtonThemeData(
@@ -75,18 +77,13 @@ ThemeData getApplicationTheme() {
     // overline     10.0  regular  1.5
 
     textTheme: TextTheme(
-      displayLarge: getSemiBoldStyle(
-          color: ColorManager.darkGrey, fontSize: FontSize.s16),
-      headlineLarge:
-          getBoldStyle(color: ColorManager.primary, fontSize: FontSize.s18),
-      headlineMedium:
-          getRegularStyle(color: ColorManager.white, fontSize: FontSize.s14),
       displayMedium:
           getMediumStyle(color: ColorManager.darkGrey, fontSize: FontSize.s16),
-      titleMedium:
-          getMediumStyle(color: ColorManager.lightGrey, fontSize: FontSize.s16),
-      bodyLarge: getRegularStyle(color: ColorManager.grey1),
-      bodySmall: getRegularStyle(color: ColorManager.grey),
+      displayLarge:
+          getBoldStyle(color: ColorManager.darkGrey, fontSize: FontSize.s16),
+      titleLarge:
+          getBoldStyle(color: ColorManager.white, fontSize: FontSize.s16),
+
     ),
 
     // Input decoration theme (text form field)
